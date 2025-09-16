@@ -1,0 +1,148 @@
+/* CRITICAL CSS - BASHO CLONE THEME */
+/* Inline critical path CSS for above-the-fold content */
+/* Target: <= 10KB gzipped for optimal loading performance */
+
+:root {
+  --bashoClone-primary: #333333;
+  --bashoClone-accent: #6366f1;
+  --bashoClone-background: #ffffff;
+  --bashoClone-text: #374151;
+  --bashoClone-muted: #9ca3af;
+  --bashoClone-border: #e5e7eb;
+  --bashoClone-font-primary: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --bashoClone-font-accent: 'Playfair Display', serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--bashoClone-font-primary);
+  color: var(--bashoClone-text);
+  background: var(--bashoClone-background);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Header - Critical for navigation */
+.bashoClone-header {
+  background: var(--bashoClone-background);
+  border-bottom: 1px solid var(--bashoClone-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.bashoClone-nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bashoClone-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--bashoClone-primary);
+  text-decoration: none;
+}
+
+/* Hero section - Above the fold */
+.bashoClone-hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, var(--bashoClone-background) 0%, #f9fafb 100%);
+}
+
+.bashoClone-hero-title {
+  font-family: var(--bashoClone-font-accent);
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: var(--bashoClone-primary);
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.bashoClone-hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--bashoClone-muted);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Essential grid layout for post cards */
+.bashoClone-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.bashoClone-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.bashoClone-card {
+  background: var(--bashoClone-background);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--bashoClone-border);
+}
+
+.bashoClone-card-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  background: var(--bashoClone-border);
+}
+
+.bashoClone-card-content {
+  padding: 1.5rem;
+}
+
+.bashoClone-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.bashoClone-card-title a {
+  color: var(--bashoClone-primary);
+  text-decoration: none;
+}
+
+/* Mobile critical styles */
+@media (max-width: 768px) {
+  .bashoClone-nav-container {
+    padding: 1rem;
+  }
+  
+  .bashoClone-hero {
+    padding: 2rem 1rem;
+  }
+  
+  .bashoClone-hero-title {
+    font-size: 2rem;
+  }
+  
+  .bashoClone-main {
+    padding: 0 1rem;
+  }
+  
+  .bashoClone-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
